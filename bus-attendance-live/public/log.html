@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Completed Records Log</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Completed Records Log</h1>
+    <div class="top-actions">
+      <button id="dashboardBtn">Dashboard</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </header>
+
+  <nav class="log-nav">
+  <button data-target="subsLog">Bus Subs</button>
+  <button data-target="repairsLog">Bus Repairs</button>
+  <button data-target="tripsLog">Field Trips</button>
+</nav>
+
+<div id="subsLog" class="log-section"></div>
+<div id="repairsLog" class="log-section" style="display:none;"></div>
+<div id="tripsLog" class="log-section" style="display:none;"></div>
+
+  <main id="logContent" class="log-grid">
+    <!-- log.js will inject .log-card sections here -->
+  </main>
+
+  <script src="js/log.js"></script>
+</body>
+</html>

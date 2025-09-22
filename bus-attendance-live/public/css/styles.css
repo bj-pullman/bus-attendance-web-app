@@ -1,0 +1,248 @@
+/* styles.css - simple clean layout */
+:root { 
+  --bg:#f7f7f7; 
+  --header-bg: #1b449d;
+  --card:#fff; 
+  --accent:#0a5; 
+  --muted:#666; 
+}
+
+.topbar { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:18px 24px; 
+  background:#fff; 
+  box-shadow:0 1px 0 rgba(0,0,0,0.06); 
+}
+
+.topbar h1 { margin:0; 
+  font-size:28px; 
+}
+
+.top-actions button { 
+  margin-left:8px; 
+  padding:8px 12px;
+  background-color: #1b449d; 
+  color: #fff;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.container { 
+  display:flex; 
+  gap:20px; 
+  padding:20px; 
+}
+
+.left-col { 
+  flex:1; 
+}
+.right-col { 
+  width:360px; 
+}
+
+.card { 
+  background:var(--card); padding:16px; 
+  border-radius:8px; margin-bottom:16px; 
+  box-shadow:0 2px 6px rgba(0,0,0,0.03); 
+}
+
+.card h2 { 
+  margin-top:0; 
+}
+
+/* This is only for the Dashboard View */
+  /* Table header */
+.card table th {
+  background-color: #1b449d;   /* navy header */
+  color: #ffffff;              /* white text */
+  padding: 8px;
+  text-align: left;
+}
+
+/* This is only for the Dashboard View */
+  /* Table rows */
+.card table td {
+    padding: 6px 8px;
+    font-weight: 550;
+}
+
+/* This is only for the Log Page */
+/* Style all tables inside log cards */
+.log-card table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #1b449d;   /* dark blue border */
+  font-weight: 550;
+}
+
+/* This is only for the Log Page */
+/* Table header */
+.log-card table th {
+  background-color: #1b449d;   /* navy header */
+  color: #ffffff;              /* white text */
+  padding: 8px;
+  text-align: left;
+}
+
+table { 
+  width:100%; 
+  border-collapse:collapse; 
+}
+
+table th, table td { 
+  padding:10px; 
+  border-bottom:1px solid #eee; 
+  text-align:left; 
+}
+
+table tbody tr.completed { 
+  opacity:0.5; 
+  text-decoration:line-through; 
+}
+
+input[type="text"], input[type="password"], select { 
+  width:100%; 
+  padding:8px; 
+  margin:6px 0 12px; 
+  box-sizing:border-box; 
+}
+
+/* General button styling */
+button {
+  background-color: #a7a49e;  /* navy blue */
+  color: #000000;                 /* white text */
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: Verdana, sans-serif;
+}
+
+button:hover {
+  background-color: #77b8f1;  /* lighter blue on hover */
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #003366;  /* darker blue when pressed */
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#presentationBtn, #logoutBtn, #logBtn{
+  background-color: var(--header-bg); 
+  color: #fff;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+#presentationBtn:hover, #logoutBtn:hover, #logBtn:hover {
+  background-color: #3783cf;
+}
+
+
+.muted { 
+    color:var(--muted); 
+    font-size:0.9em; 
+    margin-top:8px; 
+}
+
+tr.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background-color: #e6ffe6; /* subtle green */
+  transition: background-color 0.3s ease;
+}
+
+/* General page styling */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+/* Layout for logs */
+/* Log navigation container */
+.log-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+/* Base button style */
+.log-nav button {
+  background: #f5f5f5;
+  border: 2px solid #1b449d;
+  color: #1b449d;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover state */
+.log-nav button:hover {
+  background: #e6ecf9;
+}
+
+/* Active tab */
+.log-nav button.active {
+  background: #1b449d;
+  color: white;
+  border-bottom: 2px solid white; /* blend into section below */
+}
+
+.log-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each section styled like a card */
+.log-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Section headers */
+.log-card h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+/* Tables */
+.log-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.log-card th,
+.log-card td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.log-card th {
+  background: #f0f0f0;
+}

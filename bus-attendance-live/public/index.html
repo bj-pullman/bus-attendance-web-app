@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bus Attendance</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Bus Attendance</h1>
+    <div class="top-actions">
+      <button id="presentationBtn">Presentation View</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+      <button id="logBtn" style="display:none;">Logs</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="left-col">
+      <div class="card" id="subsCard">
+        <h2>Bus Driver Subs</h2>
+        <table id="subsTable">
+          <thead>
+            <tr>
+              <th>Bus #</th>
+              <th>Morning Sub</th>
+              <th>Afternoon Sub</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="card" id="repairsCard">
+        <h2>Bus Repairs</h2>
+        <table id="repairsTable">
+          <thead>
+            <tr>
+              <th>Down Bus #</th>
+              <th>Reason</th>
+              <th>Sub Bus #</th>
+              <th>Created On</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="card" id="tripsCard">
+        <h2>Field Trips</h2>
+        <table id="tripsTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Start</th>
+              <th>End</th>
+              <th>Driver</th>
+              <th>Bus #</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="right-col" id="adminPanel">
+      <div class="card">
+        <h2>Admin Panel</h2>
+
+        <div id="loginArea">
+          <form id="loginForm">
+            <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+            <button type="submit" id="loginSubmit">Login</button>
+            <div id="loginMsg"></div>
+          </form>
+        </div>
+
+        <div id="adminArea" style="display:none;">
+          <label>Section</label>
+          <select id="adminSection">
+            <option value="bus_subs">Bus Driver Subs</option>
+            <option value="bus_repairs">Bus Repairs</option>
+            <option value="field_trips">Field Trips</option>
+          </select>
+
+          <form id="adminForm">
+            <div id="formFields"></div>
+            <button type="submit">Save</button>
+            <button id="clearForm" type="button">Clear</button>
+          </form>
+
+          <hr />
+          <!-- <div>
+            <button id="bulkDeleteBtn">Delete Selected</button>
+          </div> -->
+        </div>
+
+      </div>
+    </aside>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
